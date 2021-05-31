@@ -113,7 +113,11 @@ if($userss){
   $stmt->bindParam(':name', $password);
   
   if($stmt->execute()){
-    header("Location: http://localhost/Ex2/login.php");
+
+    setcookie('username', $username1, time() + (86400 * 30), "/"); 
+
+  
+    header("Location: http://localhost/Ex2/home.php");
 
   }
   }

@@ -6,6 +6,14 @@
     <title>Document</title>
     
     <link rel="stylesheet" href="style.css">
+    <?php
+
+if(isset($_COOKIE['username'])) {
+  header("Location: http://localhost/Ex2/home.php");
+
+}
+
+?>
 </head>
 <body>
 <form action="login.php" method='post'>
@@ -59,6 +67,8 @@ $password = "12345678";
  $stmt->execute([$username1,$password1]); 
  $userss = $stmt->fetch();
 if($userss){
+  setcookie('username', $username1, time() + (86400 * 30), "/"); 
+
   echo 'hellloooo';
   header("Location: http://localhost/Ex2/home.php");
 }else{
@@ -79,6 +89,7 @@ if($userss){
 
   
     <button type="submit" name='submit2' class="registerbtn">Go</button>
+    <a href='http://localhost/Ex2/Register.php'>do not have an account?</a>
   </div>
 
 

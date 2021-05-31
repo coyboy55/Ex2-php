@@ -7,6 +7,12 @@
 </head>
 <body>
 <?php
+
+
+if(!isset($_COOKIE['username'])) {
+    header("Location: http://localhost/Ex2/login.php");
+
+}
 $servername = "localhost";
 $username = "user-data";
 $password = "12345678";
@@ -39,4 +45,18 @@ while ($row = $stmt->fetch()) {
 
 ?>
 </body>
+<?php
+
+if(isset($_POST["submit3"])){
+    echo 'hello';
+    unset($_COOKIE['username']);
+    setcookie('username', '', time() - 3600, '/');
+    header('Location: http://localhost/Ex2/login.php ');
+}
+
+
+?>
+<form method='post'>
+<button type='submit' name='submit3'>logout</a>
+</form>
 </html>
