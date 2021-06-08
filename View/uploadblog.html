@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://cdn.ckeditor.com/4.5.11/standard/ckeditor.js"></script>
+
+    <link rel="stylesheet" href="./Blogs.css">
+    <link rel="stylesheet" href="../style.css">
+
+
+    <title>New Blog</title>
+
+</head>
+
+<body>
+    <header>
+    
+<div class="header">
+    <a href="http://localhost/Ex2/blogs.php" class="logo">CompanyLogo</a>
+    <div class="header-right">
+      <a class="active" href="http://localhost/Ex2/blogs.php">blogs</a>
+      <a class="active" href="http://localhost/Ex2/files.php">files</a>
+  
+      <a href="#contact">Contact</a>
+      <a href="http://localhost/Ex2/View/uploadblog.html">add blog</a>
+      <a href="http://localhost/Ex2/View/uploadFiles.html">add file</a>
+      <a href="http://localhost/Ex2/myAccount.php">my account</a>
+  
+  
+  
+    </div>
+  </div> 
+        </header>
+
+    <form action="../create-blog.php" method="post" enctype="multipart/form-data">
+
+        <div class="container containerrad">
+            <div class="allin">
+                <h1 class="titleBlog">NEW BLOG</h1>
+
+                <input type="text" placeholder="Enter Title" name="title" id="title" required />
+
+                <textarea name="overview" id="overview" placeholder="Overview"></textarea>
+
+                <div class="divofTextarea">
+                    <textarea name="editor" id="editor"></textarea>
+                </div>
+                <button type="submit" name="btn-save" class="savebtn">
+                    Save
+                </button>
+            </div>
+        </div>
+    </form>
+
+    <script>
+    CKEDITOR.replace('editor');
+    </script>
+    <script src="//cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
+</body>
+
+</html> 

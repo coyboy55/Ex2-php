@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right, rgb(67, 67, 67), rgb(0, 0, 0));
+}
+
+.inputfilestyle::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.inputfilestyle {
+    width: 100%;
+}
+
+.inputfilestyle::before {
+    content: 'Select files';
+    display: inline-block;
+    padding: 10px 17%;
+    outline: none;
+    cursor: pointer;
+    font-size: 12pt;
+}
+
+.divofFile {
+    width: 100%;
+}
+
+.divofTextarea {
+    border-radius: 20px;
+    width: 100%;
+    margin-top: 20px;
+    background: #f1f1f1;
+}
+
+.allin {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+}
+
+.titleBlog {
+    font-weight: bold;
+   
+}
+
+*:focus {
+    outline: none;
+}
+
+input[type=text], #overview {
+    width: 100%;
+    padding: 15px;
+    margin-top: 15px;
+    border: none;
+    background: #f1f1f1;
+    border-radius: 20px;
+}
+
+form {
+    margin-top: 50px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    border-radius: 20px;
+    padding: 10px 25px 40px 25px;
+    background-color: white;
+    margin-bottom: 50px;
+}
+
+.savebtn {
+    margin-top: 30px;
+    background-image: linear-gradient(to right, rgb(67, 67, 67), rgb(0, 0, 0));
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.inputfilestyle {
+    margin-top: 30px;
+    color: black;
+    padding: 16px 20px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+.savebtn:hover, .inputfilestyle:hover {
+    background-image: linear-gradient(to left, rgb(130, 0, 0), rgb(200, 0, 0));
+    opacity: 1;
+    color: white;
+}

@@ -9,13 +9,17 @@
     <?php
 
 if(isset($_COOKIE['username'])) {
-  header("Location: http://localhost/Ex2/home.php");
+  header("Location: http://localhost/Ex2/blogs.php");
 
 }
 
 ?>
 </head>
 <body>
+<header>
+<?php include 'header.php'; ?>
+
+</header>
 <form action="login.php" method='post'>
 <?php
 class usersL{
@@ -67,10 +71,12 @@ $password = "12345678";
  $stmt->execute([$username1,$password1]); 
  $userss = $stmt->fetch();
 if($userss){
-  setcookie('username', $username1, time() + (86400 * 30), "/"); 
 
-  echo 'hellloooo';
-  header("Location: http://localhost/Ex2/home.php");
+  setcookie('idU', $userss['id'], time() + (86400 * 30), "/"); 
+  session_start();
+  $_SESSION['username']='ali';
+
+  header("Location: http://localhost/Ex2/blogs.php");
 }else{
   echo 'username or password incorrect';
 }
